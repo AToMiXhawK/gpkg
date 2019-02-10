@@ -20,6 +20,10 @@ else
 	fi" >> ~/.profile
 
 	source ~/.profile
+	cd ~/gpkg
+	chmod a+x gpkg
+	cd ~
+	exit
 fi
 
 
