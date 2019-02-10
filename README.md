@@ -4,6 +4,7 @@ Universal Linux Package Manager Script
 Script to unify package manager scripts
 
 usage: 
+
 `git clone https://github.com/AToMiXhawK/gpkg.git ~/gpkg`
 
 `cd gpkg`
