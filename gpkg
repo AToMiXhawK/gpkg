@@ -24,12 +24,16 @@ case $release in
 	;;
 
 	"Solus")
-		if [ $1 = "-S" ]
+		if [ ${1:0:1} = "-" ]
 		then
-			sudo eopkg install $2 $3 $4 $5 $6 $7 $8 $9
-		elif [ $1 = "-R" ]
-		then
-			sudo eopkg remove $2 $3 $4 $5 $6 $7 $8 $9
+			if [ $1 = "-S" ]; then
+				sudo eopkg install $2 $3 $4 $5 $6 $7 $8 $9
+			elif [ $1 = "-R" ]
+			then
+				sudo eopkg remove $2 $3 $4 $5 $6 $7 $8 $9
+			else
+				sudo eopkg $*
+			fi
 		else
 			eopkg search $1 | sort | nl -s':  ' | tac > search.list
 			cat search.list
