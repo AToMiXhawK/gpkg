@@ -11,6 +11,14 @@ if [[ -d $DIR ]]
 then
   	cd ~/gpkg
   	git pull
+	echo -e "if [ -d "$HOME/gpkg" ] ; then
+    PATH="$HOME/gpkg:$PATH"
+	fi" >> ~/.profile
+
+	source ~/.profile
+	cd ~/gpkg
+	chmod a+x ~/gpkg/gpkg
+	cd ~
   	exit
 else
 	cd ~
@@ -21,7 +29,7 @@ else
 
 	source ~/.profile
 	cd ~/gpkg
-	chmod a+x gpkg
+	chmod a+x ~/gpkg/gpkg
 	cd ~
 	exit
 fi
