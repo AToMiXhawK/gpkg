@@ -3,7 +3,7 @@ Universal Linux Package Manager Script
 
 Script to unify package manager scripts
 
-## Installation
+## Installation/Updation
 
 ### Using `curl`
 
