@@ -50,3 +50,6 @@ case $release in
 
 esac
 echo -e "\n$($cyan)// All done."
+
+
+#https://stackoverflow.com/questions/19296667/remove-ansi-color-codes-from-a-text-file-using-bash
