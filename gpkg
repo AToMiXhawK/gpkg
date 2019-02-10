@@ -23,7 +23,6 @@ case $release in
 	;;
 
 	"Solus")
-		if
 		sudo eopkg install $*
 	;;
 	
