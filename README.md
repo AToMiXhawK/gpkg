@@ -2,8 +2,11 @@
 Universal Linux Package Manager Script
 
 Script to unify package manager scripts
+
 usage: 
-`chmod a+x gpkg'
+`git clone https://github.com/AToMiXhawK/gpkg.git ~/gpkg`
+`cd gpkg`
+`bash install.sh` or `./install.sh`
 
 `gpkg <normal things that you pass to default package manager>`
 
