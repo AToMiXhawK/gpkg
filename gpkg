@@ -30,8 +30,17 @@ case $release in
 		then
 			sudo eopkg remove $2 $3 $4 $5 $6 $7 $8 $9
 		else
-			echo -e "\n$($cyan)// Invalid Argument!!"
-			exit
+			eopkg search $1 | sort | nl -s':  ' | tac > search.list
+			cat search.list
+			echo -e "\n$($yellow)Packages to install (eg: 1 2 3)\n$($reset)"
+			read -p ": " ch
+			for choice in $ch; do
+				line=`expr $(wc -l < search.list) - $choice + 1`
+				head -n $line search.list | tail -1 | awk '{print $2}' >> install.list
+				sudo eopkg install $(echo $(cat install.list))
+				rm install.list search.list
+			done
+				
 		fi
 	;;
 	
