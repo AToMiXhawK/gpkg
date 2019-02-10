@@ -27,7 +27,7 @@ Script to unify package manager scripts
 
 Currently supports: Archlinux, Manjaro, Antergos, Solus Linux, Void Linux and other Archlinux based distros
 
-Contact @atomixhawk (telegram/github) for support
+Contact <a href=https://github.com/AToMiXhawK>@atomixhawk</a> (telegram/github) for support
 
 New feature!! Added `yay` like feature for solus linux
 usage: `gpkg <pakage to search>`
