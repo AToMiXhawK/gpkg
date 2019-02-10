@@ -2,6 +2,7 @@
 
 cyan='tput setaf 6'
 yellow='tput setaf 3'
+red='tput setaf 1'
 reset='tput sgr0'
 
 # install yay
@@ -32,6 +33,10 @@ case $release in
 		else
 			eopkg search $1 | sort | nl -s':  ' | tac > search.list
 			cat search.list
+			if ! [[ -s search.list ]]; then
+				echo -e "$($red)\nNo package found in search$($reset)"
+				exit
+			fi
 			echo -e "\n$($yellow)Packages to install (eg: 1 2 3)\n$($reset)"
 			read -p ": " ch
 			for choice in $ch; do
