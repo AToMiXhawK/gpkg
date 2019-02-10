@@ -54,7 +54,7 @@ case $release in
 	;;
 	
 	*)
-		echo -e "\n$($cyan)// woops. you're probably not running a $($yellow)Supported distro\n$($red)Contact @atomixhawk (telegram/github)$($reset)\n"
+		echo -e "\n$($cyan)// woops. you're probably not running a supported distro\n$($yellow)Currently supports: Archlinux, Manjaro, Antergos, Solus Linux, Void Linux and other Archlinux based distros\n$($red)Contact @atomixhawk (telegram/github) for support$($reset)\n"
 	;;
 
 esac
