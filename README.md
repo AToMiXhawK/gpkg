@@ -30,4 +30,4 @@ Currently supports: Archlinux, Manjaro, Antergos, Solus Linux, Void Linux and ot
 Contact @atomixhawk (telegram/github) for support
 
 New feature!! Added `yay` like feature for solus linux
-usage: `./gpkg <pakage to search>`
+usage: `gpkg <pakage to search>`
