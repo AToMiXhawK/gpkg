@@ -23,7 +23,9 @@ case $release in
 	;;
 
 	"Solus")
+		if
 		sudo eopkg install $*
+	;;
 	
 	*)
 		echo -e "\n$($cyan)// woops. you're probably not running an $($yellow)Arch $($cyan)based distro$($reset)\n"
