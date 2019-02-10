@@ -23,7 +23,16 @@ case $release in
 	;;
 
 	"Solus")
-		sudo eopkg install $*
+		if [ $1 = "-S" ]
+		then
+			sudo eopkg install $2 $3 $4 $5 $6 $7 $8 $9
+		elif [ $1 = "-R" ]
+		then
+			sudo eopkg remove $2 $3 $4 $5 $6 $7 $8 $9
+		else
+			echo -e "\n$($cyan)// Invalid Argument!!"
+			exit
+		fi
 	;;
 	
 	*)
