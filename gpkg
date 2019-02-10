@@ -54,7 +54,7 @@ case $release in
 	;;
 	
 	*)
-		echo -e "\n$($cyan)// woops. you're probably not running an $($yellow)Arch $($cyan)based distro$($reset)\n"
+		echo -e "\n$($cyan)// woops. you're probably not running a $($yellow)Supported distro\n$($red)Contact @atomixhawk (telegram/github)$($reset)\n"
 	;;
 
 esac
