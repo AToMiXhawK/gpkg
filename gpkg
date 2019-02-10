@@ -37,9 +37,9 @@ case $release in
 			for choice in $ch; do
 				line=`expr $(wc -l < search.list) - $choice + 1`
 				head -n $line search.list | tail -1 | awk '{print $2}' >> install.list
-				sudo eopkg install $(echo $(cat install.list))
-				rm install.list search.list
 			done
+			sudo eopkg install $(echo $(cat install.list | sed -r "s/\x1B\[(([0-9]{1,2})?(;)?([0-9]{1,2})?)?[m,K,H,f,J]//g"))
+			rm install.list search.list
 				
 		fi
 	;;
