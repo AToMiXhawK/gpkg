@@ -5,7 +5,9 @@ Script to unify package manager scripts
 
 usage: 
 `git clone https://github.com/AToMiXhawK/gpkg.git ~/gpkg`
+
 `cd gpkg`
+
 `bash install.sh` or `./install.sh`
 
 `gpkg <normal things that you pass to default package manager>`
