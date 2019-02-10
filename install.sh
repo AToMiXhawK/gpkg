@@ -12,8 +12,8 @@ then
   	cd ~/gpkg
   	git pull
 	echo -e "if [ -d "$HOME/gpkg" ] ; then
-    PATH="$HOME/gpkg:$PATH"
-	fi" >> ~/.profile
+PATH="$HOME/gpkg:$PATH"
+fi" >> ~/.profile
 
 	source ~/.profile
 	cd ~/gpkg
@@ -24,8 +24,8 @@ else
 	cd ~
 	git clone https://github.com/AToMiXhawk/gpkg ~/gpkg
 	echo -e "if [ -d "$HOME/gpkg" ] ; then
-    PATH="$HOME/gpkg:$PATH"
-	fi" >> ~/.profile
+PATH="$HOME/gpkg:$PATH"
+fi" >> ~/.profile
 
 	source ~/.profile
 	cd ~/gpkg
