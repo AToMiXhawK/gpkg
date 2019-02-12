@@ -7,11 +7,11 @@ Script to unify package manager scripts
 
 ### Using `curl`
 
-`bash -c  "$(curl -sLo- https://transfer.sh/ldSud/install.sh)"`
+`bash -c  "$(curl -sLo- https://raw.githubusercontent.com/AToMiXhawK/gpkg/master/install.sh)"`
 
 ### Using `wget`
 
-`bash -c  "$(wget -qO- https://transfer.sh/ldSud/install.sh)"`
+`bash -c  "$(wget -qO- https://raw.githubusercontent.com/AToMiXhawK/gpkg/master/install.sh)"`
 
 ### Using `git`
 
