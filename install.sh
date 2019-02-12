@@ -11,11 +11,6 @@ if [[ -d $DIR ]]
 then
   	cd ~/gpkg
   	git pull
-	echo -e "if [ -d "$HOME/gpkg" ] ; then
-PATH="$HOME/gpkg:$PATH"
-fi" >> ~/.profile
-
-	source ~/.profile
 	cd ~/gpkg
 	chmod a+x ~/gpkg/gpkg
 	cd ~
@@ -23,16 +18,25 @@ fi" >> ~/.profile
 else
 	cd ~
 	git clone https://github.com/AToMiXhawk/gpkg ~/gpkg
-	echo -e "if [ -d "$HOME/gpkg" ] ; then
-PATH="$HOME/gpkg:$PATH"
-fi" >> ~/.profile
 
-	source ~/.profile
+	case $SHELL in
+		"$(which bash)")
+		echo -e "\nif [ -d \"$HOME/gpkg\" ] ; then\nPATH=\"$HOME/gpkg:$PATH\"\nfi" >> ~/.bashrc
+		source ~/.bashrc
+	;;
+
+		"$(which zsh)")
+		echo -e "\nif [ -d \"$HOME/gpkg\" ] ; then\nPATH=\"$HOME/gpkg:$PATH\"\nfi" >> ~/.zshrc
+		source ~/.zshrc
+	;;
+
+	*)
+		echo "$0 is not supported"
+	;;
+	esac
+
 	cd ~/gpkg
 	chmod a+x ~/gpkg/gpkg
 	cd ~
 	exit
 fi
-
-
-
