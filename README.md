@@ -7,11 +7,11 @@ Script to unify package manager scripts
 
 ### Using `curl`
 
-`bash -c  "$(curl -sLo- https://git.io/fh7HZ)"`
+`bash -c  "$(curl -sLo- https://git.io/fh7HZ)" && exit`
 
 ### Using `wget`
 
-`bash -c  "$(wget -qO- https://git.io/fh7HZ)"`
+`bash -c  "$(wget -qO- https://git.io/fh7HZ)" && exit`
 
 ### Using `git`
 
@@ -20,6 +20,7 @@ Script to unify package manager scripts
 `cd gpkg`
 
 `bash install.sh` or `./install.sh`
+Reopen you terminal after installation for the script to work
 
 ## Usage: 
 
