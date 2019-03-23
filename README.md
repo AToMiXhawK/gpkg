@@ -9,9 +9,13 @@ Script to unify package manager scripts
 
 `bash -c  "$(curl -sLo- https://git.io/fh7HZ)" && exit`
 
+Current terminal will be closed (save your work if any)
+
 ### Using `wget`
 
 `bash -c  "$(wget -qO- https://git.io/fh7HZ)" && exit`
+
+Current terminal will be closed (save your work if any)
 
 ### Using `git`
 
@@ -20,6 +24,7 @@ Script to unify package manager scripts
 `cd gpkg`
 
 `bash install.sh` or `./install.sh`
+
 Reopen you terminal after installation for the script to work
 
 ## Usage: 
