@@ -31,7 +31,7 @@ Reopen you terminal after installation for the script to work
 
 `gpkg <normal things that you pass to default package manager>`
 
-Currently supports: Archlinux, Manjaro, Antergos, Solus Linux, Void Linux, Ubuntu, and other Archlinux based distros
+Currently supports: Archlinux, Manjaro, Antergos, Solus Linux, Void Linux,Ubuntu and other Archlinux based distros
 
 Contact @atomixhawk (<a href=https://github.com/AToMiXhawK>Github</a>/<a href=https://t.me/atomixhawk>Telegram</a>/<a href=mailto:atomixhawk@gmail.com>e-mail</a>) for support
 
