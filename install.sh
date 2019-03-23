@@ -23,15 +23,22 @@ else
 		"$(which bash)")
 		echo -e "\nif [ -d \"$HOME/gpkg\" ] ; then\nPATH=\"$HOME/gpkg:$PATH\"\nfi" >> ~/.bashrc
 		source ~/.bashrc
+		echo "Please close and reopen your terminal if the command `gpkg` doesn't work"
 	;;
 
 		"$(which zsh)")
 		echo -e "\nif [ -d \"$HOME/gpkg\" ] ; then\nPATH=\"$HOME/gpkg:$PATH\"\nfi" >> ~/.zshrc
 		source ~/.zshrc
+		echo "Please close and reopen your terminal if the command `gpkg` doesn't work"
 	;;
 
 	*)
 		echo "$0 is not supported"
+		echo "Please add the following to the config file of you terminal manually (eg. ~/.bashrc or ~/.zshrc)"
+		echo -e "\nif [ -d \"$HOME/gpkg\" ] ; then\nPATH=\"$HOME/gpkg:$PATH\"\nfi"
+		echo -e "\nand then close and reopen your terminal and check if the command `gpkg` works"
+		echo "Contact @atomixhawk (telegram/github) for support"
+
 	;;
 	esac
 
