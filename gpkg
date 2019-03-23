@@ -68,6 +68,17 @@ case $release in
 	"Ubuntu")
 			if [ $# = 0 ]; then
 				sudo apt update
+				read -p "Upgrade system? [y/n]: " opt
+				case $opt in
+				Y|y)
+					sudo apt upgrade
+				;;
+				N|n)
+					echo "Upgarde aborted! "
+				;;
+				*)
+					echo "Abort"
+				;;
 			elif [ ${1:0:1} = "-" ]; then
 				if [ $1 = "-S" ]; then
 					sudo apt install $2 $3 $4 $5 $6 $7 $8 $9
@@ -80,6 +91,10 @@ case $release in
 				sudo apt install $2 $3 $4 $5 $6 $7 $8 $9
 			elif [ $1 = "remove" ]; then
 				sudo apt remove $2 $3 $4 $5 $6 $7 $8 $9
+			elif [ $1 = "update" ]; then
+				sudo apt update
+			elif [ $1 = "upgrade" ]; then
+				sudo apt upgrade
 			else	
 				echo "Invalid"
 			fi
