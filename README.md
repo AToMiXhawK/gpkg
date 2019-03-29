@@ -37,3 +37,6 @@ Contact @atomixhawk (<a href=https://github.com/AToMiXhawK>Github</a>/<a href=ht
 
 New feature!! Added `yay` like feature for solus linux
 usage: `gpkg <pakage to search>`
+
+
+This is a testing branch
